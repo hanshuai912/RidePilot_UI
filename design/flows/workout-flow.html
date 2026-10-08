@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>训练课程详情与编辑流程 · Frame 01</title>
+  <link rel="stylesheet" href="workout-flow.css">
+</head>
+<body>
+  <div class="prototype-layout">
+    <aside class="review-panel" aria-label="设计稿导航与状态验收">
+      <div class="review-brand">训练课程流程 <span>10 FRAMES</span></div>
+      <p class="review-intro">独立的深层页面设计稿。点击 Frame 检查页面，或从 01 按业务路径完成交互。</p>
+      <div class="review-heading">页面</div>
+      <nav id="frame-list" class="frame-list" aria-label="十个设计 Frame"></nav>
+      <div class="review-heading states-heading">额外状态</div>
+      <div id="state-list" class="state-list"></div>
+      <div class="review-heading states-heading">能力资料变体</div>
+      <button id="ftp-toggle" class="review-toggle" type="button">当前：FTP 未录入</button>
+      <p class="review-note">这个侧栏是设计验收工具，不属于 App 界面。课程与业务操作都在右侧 390pt 页面内。</p>
+    </aside>
+    <div class="device-column">
+      <div class="phone" aria-label="390pt 移动端训练课程交互原型">
+        <div class="status-bar" aria-hidden="true"><span>9:41</span><span class="system-icons"><svg width="18" height="13" viewBox="0 0 18 13"><path d="M1 10V8m4 2V6m4 4V4m4 6V2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><svg width="16" height="13" viewBox="0 0 16 13"><path d="M1 4c4-4 10-4 14 0M4 7c2-2 6-2 8 0M7 10h2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" fill="none"/></svg><svg width="23" height="12" viewBox="0 0 23 12"><rect x=".6" y=".6" width="19" height="10.8" rx="2.3" stroke="currentColor" fill="none"/><rect x="2.5" y="2.5" width="14.8" height="7" rx="1" fill="currentColor"/><path d="M21 4v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span></div>
+        <div id="screen" class="screen-scroll" aria-live="polite"></div>
+        <div id="action-bar" class="action-bar"></div>
+        <div id="overlay-root"></div>
+      </div>
+      <div id="frame-caption" class="frame-caption">Frame 01 · 训练课程详情</div>
+    </div>
+  </div>
+  <script src="workout-flow.js"></script>
+</body>
+</html>
