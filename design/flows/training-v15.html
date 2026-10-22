@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>训练 V1.5 · 手动添加训练</title>
+  <link rel="stylesheet" href="training-v15.css">
+</head>
+<body>
+<div class="layout">
+  <aside class="review"><h1>训练流程 <span>V1.5</span></h1><p>基于 2026-10-22 PRD。重点验证同日多节训练、时间/距离目标和手动课程保存语义。</p><h2>页面</h2><button data-screen="home" class="active">01 · 训练首页</button><button data-screen="date">02 · 选择训练日期</button><button data-screen="editor">03 · 手动课程编辑</button><button data-screen="add-action">03A · 添加动作</button><button data-screen="preview">04 · 保存当天课程</button><button data-screen="detail">05 · 课程详情</button><h2>设计要点</h2><p>正式计划与草稿分离；不设置开始时间；时间/距离分开汇总；无 FTP 时禁用 %FTP。</p></aside>
+  <div class="device"><main class="phone" aria-label="RidePilot 训练 V1.5 高保真流程原型">
+    <div class="status"><span>9:41</span><span class="icons"><span>▮▮▮</span><span>⌁</span><span>▰</span></span></div>
+    <section class="screen" id="screen-home">
+      <header class="header"><div><div class="eyebrow">公路车 · 正式计划</div><h2>训练</h2></div><button class="round" aria-label="计划版本历史">↻</button></header>
+      <div class="summary"><div><div class="eyebrow">本周计划</div><strong>4<span style="font-size:22px;letter-spacing:0"> 节</span></strong><small>骑行课程</small></div><aside><b>255 分钟</b>计划训练量<br><span class="gold">1 个待处理草稿</span></aside></div>
+      <section class="surface calendar"><div class="calendar-head"><h3>10 月 5 日—11 日</h3><div class="calendar-actions"><button class="icon-btn" aria-label="上一周">‹</button><button class="icon-btn" aria-label="下一周">›</button></div></div><div class="days"><button class="day"><small>周一</small><b>5</b><i class="dot rest"></i></button><button class="day"><small>周二</small><b>6</b><i class="dot"></i></button><button class="day"><small>周三</small><b>7</b><i class="dot rest"></i></button><button class="day active"><small>周四</small><b>8</b><i class="dot multi"></i></button><button class="day"><small>周五</small><b>9</b><i class="dot"></i></button><button class="day"><small>周六</small><b>10</b><i class="dot test"></i></button><button class="day"><small>周日</small><b>11</b><i class="dot rest"></i></button></div><div class="key"><span><i></i>训练</span><span><i class="orange"></i>测试/比赛</span><span><i class="grey"></i>休息</span></div></section>
+      <div class="date-head"><h3>10 月 8 日 · 周四</h3><span>今日 · 2 节课程</span></div>
+      <article class="surface workout"><div class="workout-top"><span>● 有氧基础</span><span class="source">AI 生成 · 正式</span></div><h3>耐力骑行</h3><p>稳定节奏建立有氧基础，保持可以完整说话的强度。</p><div class="chips"><span class="chip gold">60 分钟</span><span class="chip">Z2 主要强度</span><span class="chip">3 个动作</span></div><div class="workout-actions"><button class="secondary" data-screen="detail">查看课程</button><button class="primary" data-screen="editor">调整计划</button></div></article>
+      <article class="surface workout"><div class="workout-top"><span style="color:var(--gold)">＋ 手动创建</span><span class="source">第 2 节 · 正式</span></div><h3>爬坡专项</h3><p>时间与距离目标独立记录，动作强度按 FTP 范围执行。</p><div class="chips"><span class="chip gold">20 分钟</span><span class="chip gold">8 公里</span><span class="chip">4 个动作</span></div><div class="workout-actions"><button class="secondary" data-screen="detail">查看课程</button><button class="secondary" data-screen="editor">编辑动作</button></div></article>
+      <button class="add-card" data-screen="date"><span class="plus">＋</span><span><strong>添加计划</strong><small>指定日期，手动创建一节新的骑行课程</small></span><span style="margin-left:auto;font-size:20px">›</span></button>
+      <div class="section-head"><h3>接下来</h3><small>阶段节点</small></div><section class="surface"><div class="event"><div class="event-icon">✓</div><div class="event-copy"><strong>有氧基础阶段测试</strong><small>10 月 21 日 · 记录结果后复评</small></div><span>›</span></div><div class="event"><div class="event-icon green">⚑</div><div class="event-copy"><strong>添加比赛或调整赛事</strong><small>先预览训练、测试和补给影响</small></div><span>›</span></div></section>
+    </section>
+    <section class="screen hidden" id="screen-date">
+      <div class="subhead"><button class="back" data-screen="home">‹</button><div><h2>添加计划</h2><small>先选择训练日期</small></div></div>
+      <section class="surface card"><span class="label">训练日期</span><input class="input" type="date" value="2026-10-08"><p class="field-hint" style="color:var(--sub);font-size:12px;margin:8px 0 0">同一天已有 1 节课程。新课程会作为第 2 节添加，不会覆盖原课程。</p></section>
+      <section class="surface card"><div class="row"><div><strong>10 月 8 日 · 周四</strong><small style="display:block;color:var(--muted);margin-top:4px">当天课程</small></div><span class="chip gold">2 节</span></div><div class="data-row" style="margin-top:12px"><span>第 1 节 · 耐力骑行</span><strong>60 分钟</strong></div><div class="data-row"><span>第 2 节 · 待创建</span><strong class="gold">手动</strong></div></section>
+      <div class="notice"><b>提示</b><span>手动课程只记录日期和当天顺序，不设置具体开始时间。</span></div>
+      <div class="bottom-action"><button class="secondary" data-screen="home">取消</button><button class="primary" data-screen="editor">创建第 2 节</button></div>
+    </section>
+    <section class="screen hidden" id="screen-editor">
+      <div class="subhead"><button class="back" data-screen="date">‹</button><div><h2>手动课程</h2><small>10 月 8 日 · 第 2 节 · 草稿</small></div></div>
+      <section class="surface card"><div class="field"><span class="label">课程名称 <em style="color:var(--muted);font-style:normal">（选填）</em></span><input class="input" value="爬坡专项"></div><div class="field"><span class="label">训练目的 <em style="color:var(--muted);font-style:normal">（选填）</em></span><input class="input" value="提升爬坡节奏"></div></section>
+      <div class="row" style="margin:18px 2px 9px"><strong>训练动作 <span class="muted" style="font-weight:400">· 4 个</span></strong><span class="chip gold">手动创建</span></div>
+      <section class="surface card" style="padding:9px 13px"><div class="seg"><div class="seg-head"><strong>1 · 热身</strong><small>动作类型</small><div class="seg-actions"><button>⋮</button></div></div><div class="seg-meta"><span>时间 · 5 分钟</span><span class="intensity">FTP 50–65%</span></div></div><div class="seg"><div class="seg-head"><strong>2 · 训练</strong><small>动作类型</small><div class="seg-actions"><button>⋮</button></div></div><div class="seg-meta"><span>距离 · 8 公里</span><span class="intensity">功率 180–210 W</span></div></div><div class="seg"><div class="seg-head"><strong>3 · 恢复</strong><small>动作类型</small><div class="seg-actions"><button>⋮</button></div></div><div class="seg-meta"><span>时间 · 5 分钟</span><span class="intensity">FTP 45–55%</span></div></div><div class="seg"><div class="seg-head"><strong>4 · 放松</strong><small>动作类型</small><div class="seg-actions"><button>⋮</button></div></div><div class="seg-meta"><span>时间 · 10 分钟</span><span class="intensity">功率 100–130 W</span></div></div><button class="add-seg" data-screen="add-action">＋ 添加动作</button><div class="totals"><div class="total"><small>时间目标</small><strong>20 分钟</strong></div><div class="total"><small>距离目标</small><strong>8 公里</strong></div></div></section>
+      <div class="notice" style="margin-top:11px"><b>FTP 强度</b><span>当前用户有可用 FTP，因此可选择 %FTP 或绝对功率；每个动作都必须填写最小和最大强度。</span></div>
+      <div class="bottom-action"><button class="secondary" data-screen="home">保存动作</button><button class="primary" data-screen="preview">保存当天课程</button></div>
+    </section>
+    <section class="screen hidden" id="screen-add-action">
+      <div class="subhead"><button class="back" data-screen="editor">‹</button><div><h2>添加动作</h2><small>第 5 个动作 · 课程草稿</small></div></div>
+      <section class="surface card">
+        <div class="field"><span class="label">动作类型</span><div class="toggle"><button class="active">热身</button><button>训练</button><button>恢复</button><button>放松</button></div></div>
+        <div class="field"><span class="label">目标类型</span><div class="toggle"><button class="active">时间</button><button>距离</button></div></div>
+        <div class="field"><span class="label">目标值</span><div class="field-grid"><input class="input" value="5" aria-label="目标值"><select class="select" aria-label="目标单位"><option>分钟</option><option>公里</option></select></div></div>
+      </section>
+      <section class="surface card"><div class="row"><div><strong>强度范围</strong><small style="display:block;color:var(--muted);margin-top:4px">最小值和最大值均必填</small></div><span class="chip gold">必填</span></div><div class="field"><span class="label">强度单位</span><div class="toggle"><button class="active">%FTP</button><button>功率 W</button></div></div><div class="field-grid"><div><span class="label">最小强度</span><input class="input" value="50" aria-label="最小强度"></div><div><span class="label">最大强度</span><input class="input" value="65" aria-label="最大强度"></div></div><p class="field-hint">当前 FTP：186 W · 2026 年 9 月 16 日手动测试</p></section>
+      <div class="notice"><b>填写提示</b><span>强度最大值不能小于最小值；距离目标只计入距离汇总，不换算为时间。</span></div>
+      <section class="surface card" style="margin-top:11px"><div class="row"><span class="label" style="margin:0">无 FTP 用户的显示</span><span class="chip">%FTP 不可选</span></div><p style="color:var(--muted);font-size:11px;line-height:1.5;margin:8px 0 0">如果用户没有可靠 FTP，%FTP 选项应置灰，并引导使用绝对功率 W。</p></section>
+      <div class="bottom-action"><button class="secondary" data-screen="editor">取消</button><button class="primary" data-screen="editor" data-add-segment="1">保存动作</button></div>
+    </section>
+    <section class="screen hidden" id="screen-preview">
+      <div class="subhead"><button class="back" data-screen="editor">‹</button><div><h2>保存当天课程</h2><small>应用前确认变更</small></div></div>
+      <section class="surface card"><div class="row"><div><span class="eyebrow">新增课程</span><h3 style="font-size:20px;margin:6px 0 0">爬坡专项</h3></div><span class="chip gold">手动创建</span></div><div class="data-row" style="margin-top:13px"><span>日期与顺序</span><strong>10 月 8 日 · 第 2 节</strong></div><div class="data-row"><span>目标汇总</span><strong>20 分钟 + 8 公里</strong></div><div class="data-row"><span>训练动作</span><strong>4 个</strong></div></section>
+      <section class="surface card"><span class="label">当天已有课程</span><div class="data-row"><span>第 1 节 · 耐力骑行</span><strong>60 分钟 · 保持不变</strong></div><div class="data-row"><span>第 2 节 · 爬坡专项</span><strong class="gold">新增</strong></div></section>
+      <div class="notice"><b>校验通过</b><span>动作顺序、时间/距离目标和 FTP 强度范围均完整。距离目标不会被换算成总时长。</span></div>
+      <section class="surface card"><span class="label">应用结果</span><p style="color:var(--sub);font-size:12px;line-height:1.5;margin:0">确认后将创建新的正式计划版本。原有第 1 节课程、历史训练记录和饮食计划不受影响。</p></section>
+      <div class="bottom-action"><button class="secondary" data-screen="editor">继续编辑</button><button class="primary" data-screen="home" data-success="1">确认并保存</button></div>
+    </section>
+    <section class="screen hidden" id="screen-detail">
+      <div class="subhead"><button class="back" data-screen="home">‹</button><div><h2>课程详情</h2><small>10 月 8 日 · 第 2 节 · 手动创建</small></div></div>
+      <section class="surface card"><div class="workout-top"><span style="color:var(--gold)">● 手动创建 · 正式计划</span></div><h3 style="font-size:25px;margin:9px 0 5px">爬坡专项</h3><p style="color:var(--sub);font-size:12px;line-height:1.5;margin:0">时间目标与距离目标分开记录；按每个动作的强度范围执行。</p><div class="totals"><div class="total"><small>时间目标</small><strong>20 分钟</strong></div><div class="total"><small>距离目标</small><strong>8 公里</strong></div></div></section>
+      <div class="section-head"><h3>动作列表</h3><small>4 个动作</small></div><section class="surface card" style="padding:9px 13px"><div class="seg"><div class="seg-head"><strong>1 · 热身</strong><small>5 分钟</small></div><div class="seg-meta"><span class="intensity">FTP 50–65%</span></div></div><div class="seg"><div class="seg-head"><strong>2 · 训练</strong><small>8 公里</small></div><div class="seg-meta"><span class="intensity">180–210 W</span></div></div><div class="seg"><div class="seg-head"><strong>3 · 恢复</strong><small>5 分钟</small></div><div class="seg-meta"><span class="intensity">FTP 45–55%</span></div></div><div class="seg"><div class="seg-head"><strong>4 · 放松</strong><small>10 分钟</small></div><div class="seg-meta"><span class="intensity">100–130 W</span></div></div></section>
+      <div class="bottom-action"><button class="secondary" data-screen="editor">编辑动作</button><button class="primary">记录完成</button></div>
+    </section>
+    <nav class="bottom" aria-label="底部导航"><button class="tab"><svg viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10H3V10Z"/><path d="M9 20v-7h6v7"/></svg>首页</button><button class="tab active"><svg viewBox="0 0 24 24"><circle cx="6" cy="17" r="3"/><circle cx="18" cy="17" r="3"/><path d="m6 17 4-8 3 8h5l-4-8h-4M14 6h2"/></svg>训练</button><button class="tab"><svg viewBox="0 0 24 24"><path d="M4 3v7m3-7v7m3-7v7M4 10h6m-3 0v11M17 21V3c3 2 4 5 4 9h-4"/></svg>饮食</button><button class="tab"><svg viewBox="0 0 24 24"><path d="M12 5c-2-3-6-2-6 1-3 0-4 4-1 6-2 3 0 6 3 6 1 3 4 3 4 0V5Zm0 0c2-3 6-2 6 1 3 0 4 4 1 6 2 3 0 6-3 6-1 3-4 3-4 0V5Z"/></svg>AI 教练</button><button class="tab"><svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2H4Z"/></svg>我的</button></nav>
+  </main><p class="caption">训练 V1.5 · 390 × 844 pt · 手动添加训练流程</p></div>
+</div>
+<script src="training-v15.js"></script>
+</body></html>
