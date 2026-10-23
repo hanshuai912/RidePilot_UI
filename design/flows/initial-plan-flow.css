@@ -1,0 +1,125 @@
+@import url('./workout-flow.css');
+
+.entry-mark {
+  width: 66px;
+  height: 66px;
+  border: 1px solid #6d6547;
+  border-radius: 19px;
+  display: grid;
+  place-items: center;
+  background: #302f24;
+  color: var(--gold);
+  font-size: 24px;
+  font-weight: 750;
+  letter-spacing: -0.05em;
+  margin-bottom: 18px;
+}
+.empty-hero {
+  position: relative;
+  overflow: hidden;
+}
+.empty-hero:after {
+  content: '';
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  border: 1px solid #464632;
+  border-radius: 50%;
+  right: -62px;
+  top: -58px;
+  opacity: .55;
+}
+.empty-hero h2 { max-width: 270px; }
+.empty-hero .body-copy { max-width: 290px; }
+.step-grid { display: grid; gap: 9px; }
+.step-item {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-height: 55px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  background: var(--surface);
+}
+.step-number {
+  width: 28px;
+  height: 28px;
+  flex: none;
+  border-radius: 9px;
+  display: grid;
+  place-items: center;
+  background: #303228;
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 750;
+}
+.step-item strong { display: block; font-size: 13px; }
+.step-item small { display: block; color: var(--muted); font-size: 11px; margin-top: 3px; }
+.progress-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  color: var(--muted);
+  font-size: 11px;
+  margin: 3px 1px 8px;
+}
+.progress-label strong { color: var(--gold); font-weight: 650; }
+.goal-list { display: grid; gap: 9px; }
+.goal-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  width: 100%;
+  min-height: 72px;
+  padding: 13px;
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  background: var(--surface);
+  color: var(--text);
+  text-align: left;
+}
+.goal-option.active { border-color: var(--gold); background: #2a2a22; }
+.goal-icon {
+  width: 34px;
+  height: 34px;
+  flex: none;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background: #2d332d;
+  color: var(--green);
+  font-size: 17px;
+}
+.goal-option.active .goal-icon { background: #3a3829; color: var(--gold); }
+.goal-copy { flex: 1; min-width: 0; }
+.goal-copy strong { display: block; font-size: 14px; }
+.goal-copy small { display: block; color: var(--muted); font-size: 11px; line-height: 1.4; margin-top: 4px; }
+.goal-check { color: var(--gold); font-size: 18px; }
+.week-grid { grid-template-columns: repeat(3, 1fr); }
+.week-grid .choice { min-height: 48px; }
+.summary-card { background: #242923; border: 1px solid #41483f; border-radius: 14px; padding: 13px; }
+.summary-card .summary-title { font-size: 12px; color: var(--muted); margin-bottom: 10px; }
+.summary-line { display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-top: 1px solid var(--line); font-size: 12px; }
+.summary-line:first-of-type { border-top: 0; padding-top: 0; }
+.summary-line span { color: var(--sub); }
+.summary-line strong { font-weight: 650; text-align: right; }
+.info-strip { display: flex; align-items: flex-start; gap: 9px; padding: 11px 12px; border-radius: 12px; border: 1px solid #3f493f; background: #242b25; color: var(--sub); font-size: 11px; line-height: 1.5; }
+.info-strip b { color: var(--green); font-size: 14px; line-height: 1; }
+.plan-hero { border-left: 3px solid var(--gold); }
+.plan-hero .metric-row { margin-top: 13px; }
+.plan-hero .metric-row strong { font-size: 35px; }
+.plan-card .proposal-head strong { font-size: 19px; }
+.plan-card .facts { margin-top: 13px; }
+.plan-card .fact strong { font-size: 12px; }
+.check-list.tight { margin-top: 10px; }
+.confirm-copy { max-width: 295px; }
+.manual-mark { background: #2d332d; border-color: #4b5b4d; color: var(--green); }
+@media(max-width:430px){
+  .week-grid .choice { font-size: 12px; }
+}
+
+.optional { color: var(--muted); font-size: 11px; font-weight: 500; }
+.input-summary { background: #252820; }
+.data-row strong { overflow-wrap: anywhere; }
