@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A01 · AI 教练持续协作流程</title>
+  <link rel="stylesheet" href="workout-flow.css">
+  <link rel="stylesheet" href="ai-coach-flow.css">
+</head>
+<body>
+  <div class="prototype-layout">
+    <aside class="review-panel" aria-label="流程评审导航">
+      <div class="review-brand">RidePilot <span>A01 FLOW</span></div>
+      <p class="review-intro">AI 教练持续协作：从当前状态出发，重新规划目标、恢复周、训练反馈和比赛周期。</p>
+      <div class="review-heading">高保真流程</div>
+      <div class="frame-list" id="frame-list"></div>
+      <div class="review-heading states-heading">评审说明</div>
+      <p class="review-note">AI 建议先形成草稿；历史训练和已完成事件不会被重新规划覆盖。</p>
+      <button class="review-toggle" id="reset-flow">重置本次演示</button>
+    </aside>
+    <main class="device-column">
+      <div class="phone" aria-label="390pt 移动端 AI 教练高保真原型">
+        <div class="status-bar" aria-hidden="true">
+          <span>9:41</span>
+          <span class="system-icons">
+            <svg width="18" height="13" viewBox="0 0 18 13"><path d="M1 10V8m4 2V6m4 4V4m4 6V2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <svg width="16" height="13" viewBox="0 0 16 13"><path d="M1 4c4-4 10-4 14 0M4 7c2-2 6-2 8 0M7 10h2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" fill="none"/></svg>
+            <svg width="23" height="12" viewBox="0 0 23 12"><rect x=".6" y=".6" width="19" height="10.8" rx="2.3" stroke="currentColor" fill="none"/><rect x="2.5" y="2.5" width="14.8" height="7" rx="1" fill="currentColor"/><path d="M21 4v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </span>
+        </div>
+        <div class="screen-scroll" id="screen"></div>
+        <div class="action-bar" id="action-bar"></div>
+        <div id="overlay"></div>
+      </div>
+      <div class="frame-caption" id="frame-caption"></div>
+    </main>
+  </div>
+  <script src="ai-coach-flow.js"></script>
+</body>
+</html>
