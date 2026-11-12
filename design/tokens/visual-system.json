@@ -1,0 +1,71 @@
+{
+  "typography": {
+    "display": {
+      "fontSize": 32,
+      "lineHeight": 38,
+      "fontWeight": 600
+    },
+    "pageTitle": {
+      "fontSize": 28,
+      "lineHeight": 34,
+      "fontWeight": 600
+    },
+    "title": {
+      "fontSize": 22,
+      "lineHeight": 28,
+      "fontWeight": 600
+    },
+    "section": {
+      "fontSize": 18,
+      "lineHeight": 24,
+      "fontWeight": 600
+    },
+    "navigation": {
+      "fontSize": 17,
+      "lineHeight": 24,
+      "fontWeight": 600
+    },
+    "card": {
+      "fontSize": 16,
+      "lineHeight": 22,
+      "fontWeight": 600
+    },
+    "body": {
+      "fontSize": 16,
+      "lineHeight": 24,
+      "fontWeight": 400
+    },
+    "caption": {
+      "fontSize": 14,
+      "lineHeight": 20,
+      "fontWeight": 400
+    },
+    "label": {
+      "fontSize": 13,
+      "lineHeight": 18,
+      "fontWeight": 500
+    },
+    "button": {
+      "fontSize": 16,
+      "lineHeight": 22,
+      "fontWeight": 600
+    },
+    "chart": {
+      "fontSize": 12,
+      "lineHeight": 16,
+      "fontWeight": 500
+    }
+  },
+  "layout": {
+    "screenGutter": 20,
+    "sectionGap": 24,
+    "cardPadding": 16,
+    "roomyCardPadding": 20,
+    "minimumTapTarget": 44
+  },
+  "colors": {
+    "textPrimary": "#EFF0E9",
+    "textSecondary": "#A2A99F",
+    "textMuted": "#939B91"
+  }
+}

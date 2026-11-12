@@ -1,0 +1,69 @@
+/* V01 — shared mobile typography and layout, 2026-11-12. */
+:root,
+:host {
+  --type-display: 32px;
+  --leading-display: 38px;
+  --type-pageTitle: 28px;
+  --leading-pageTitle: 34px;
+  --type-title: 22px;
+  --leading-title: 28px;
+  --type-section: 18px;
+  --leading-section: 24px;
+  --type-navigation: 17px;
+  --leading-navigation: 24px;
+  --type-card: 16px;
+  --leading-card: 22px;
+  --type-body: 16px;
+  --leading-body: 24px;
+  --type-caption: 14px;
+  --leading-caption: 20px;
+  --type-label: 13px;
+  --leading-label: 18px;
+  --type-button: 16px;
+  --leading-button: 22px;
+  --type-chart: 12px;
+  --leading-chart: 16px;
+  --muted: #939b91;
+  --screen-gutter: 20px;
+}
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "PingFang SC", "Noto Sans CJK SC",
+    sans-serif;
+  font-size: var(--type-body);
+  line-height: var(--leading-body);
+}
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+.scroll,
+.screen {
+  padding-left: var(--screen-gutter);
+  padding-right: var(--screen-gutter);
+}
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  letter-spacing: normal;
+}
+.subnav h1 {
+  font-size: var(--type-navigation);
+  line-height: var(--leading-navigation);
+}
+.tab {
+  font-size: var(--type-chart);
+  line-height: var(--leading-chart);
+}
+.sheet {
+  max-height: 85%;
+  overflow: auto;
+}
+
+h1 {font-size:var(--type-pageTitle);line-height:var(--leading-pageTitle)}
+
+.phone h1 {font-size:var(--type-pageTitle);line-height:var(--leading-pageTitle)}
+.phone .subnav h1 {font-size:var(--type-navigation);line-height:var(--leading-navigation)}

@@ -27,7 +27,7 @@ for key, label, filename in SCREENS:
     source = (HERE / filename).read_text(encoding="utf-8")
     # Standalone pages set their default text color on <body>. Inside Shadow DOM
     # there is no body element, so the host must provide that inherited color.
-    css = part(source, "style").replace(":root{", ":host{color:var(--text);", 1)
+    css = (part(source, "style") + "\n" + (HERE / "visual-system.css").read_text()).replace(":root{", ":host{color:var(--text);", 1)
     body = part(source, "body")
     if "</template>" in css or "</template>" in body:
         raise ValueError(f"Unexpected template closing tag in {filename}")
