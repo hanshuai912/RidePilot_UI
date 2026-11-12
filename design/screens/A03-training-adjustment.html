@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>调整训练</title>
+<style>
+:root{color-scheme:dark;--bg:#0D0F0E;--surface:#191C1A;--surface-2:#232723;--border:#313731;--line:#292F29;--gold:#C9BA91;--gold-subtle:#373628;--text:#EFF0E9;--sub:#A2A99F;--muted:#787F77;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Noto Sans CJK SC",sans-serif}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text)}h1,h2,h3,p{margin:0}a,button,textarea{font:inherit}a,button{color:inherit;-webkit-tap-highlight-color:transparent}a{text-decoration:none}button{cursor:pointer}a:focus-visible,button:focus-visible,textarea:focus-visible{outline:2px solid var(--gold);outline-offset:3px}svg{width:20px;height:20px;flex:none}
+.desktop{min-height:100vh;display:grid;place-content:center;gap:18px;padding:28px}.phone{width:390px;height:844px;overflow:hidden;border:1px solid var(--border);border-radius:32px;background:var(--bg)}.status{height:48px;display:flex;align-items:center;justify-content:space-between;padding:10px 24px 0;font-size:14px;font-weight:600}.status small{font-size:13px}.subnav{height:56px;display:flex;align-items:center;padding:0 20px;border-bottom:1px solid var(--line);gap:12px}.subnav>a,.nav-spacer{width:44px;min-height:44px;display:grid;place-items:center}.subnav h1{font-size:17px;line-height:22px;flex:1;text-align:center;font-weight:600}.subscroll{height:calc(100% - 104px);overflow:auto;padding:24px 20px 64px;display:flex;flex-direction:column;gap:24px}.intro h2{font-size:24px;line-height:30px;font-weight:600}.intro p{font-size:16px;line-height:24px;margin-top:8px;color:var(--sub)}h3{font-size:20px;line-height:26px;font-weight:600;margin-bottom:12px}.choices{display:flex;flex-wrap:wrap;gap:8px}.choices button{min-height:48px;min-width:80px;flex:1;border-radius:12px;border:1px solid var(--border);background:var(--surface);padding:12px 8px;color:var(--sub);font-size:16px;line-height:24px}.choices button[aria-checked=true]{border-color:var(--gold);background:var(--gold-subtle);color:var(--gold)}.hint,.counter,.footnote{font-size:13px;line-height:18px;color:var(--sub)}.hint{margin-top:12px}.field-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px}.field-head small{font-size:13px;color:var(--sub)}.prompts{display:flex;flex-wrap:wrap;gap:8px}.prompts button{flex:1 1 45%;min-width:120px;min-height:44px;padding:12px;border:1px solid var(--border);border-radius:12px;background:var(--surface);color:var(--sub);font-size:13px;line-height:18px}.prompts button[aria-pressed=true]{border-color:var(--gold);background:var(--gold-subtle);color:var(--gold)}.prompts button:disabled:not([aria-pressed=true]){opacity:.5}.prompts+.hint{margin:8px 0 12px}textarea{display:block;width:100%;min-height:120px;background:var(--surface-2);border:1px solid var(--border);border-radius:12px;padding:16px;color:var(--text);font-size:16px;line-height:24px;resize:vertical}textarea::placeholder{color:var(--muted)}.counter{margin-top:8px;text-align:right;font-variant-numeric:tabular-nums}.goal{min-height:76px;display:flex;align-items:center;gap:12px;border:1px solid var(--border);border-radius:12px;background:var(--surface);padding:16px}.goal>div{flex:1;min-width:0}.goal small{display:block;font-size:13px;line-height:18px;color:var(--sub)}.goal strong{display:block;font-size:17px;line-height:22px;font-weight:600;margin:4px 0}.goal>span{font-size:13px;line-height:18px;color:var(--gold)}.goal svg{color:var(--sub);width:18px;height:18px}.primary{display:flex;align-items:center;justify-content:center;min-height:52px;border-radius:12px;background:var(--gold);color:#171913;font-weight:600;font-size:16px}.caption{color:var(--sub);text-align:center;font-size:12px;line-height:22px;max-width:390px}@media(max-width:500px){.desktop{padding:0;display:block}.phone{width:100%;height:100dvh;border:0;border-radius:0}.caption{display:none}}
+</style>
+</head>
+<body><div class="desktop"><main class="phone">
+<div class="status"><span>9:41</span><small>● ▰</small></div>
+<nav class="subnav"><a href="A01-ai-coach.html" aria-label="返回 AI 教练"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg></a><h1>调整训练</h1><span class="nav-spacer"></span></nav>
+<div class="subscroll">
+<section class="intro"><h2>调整接下来的训练</h2><p>选好范围，再补充时间、强度或训练环境的变化。</p></section>
+<section><h3>调整哪些训练</h3><div class="choices" role="radiogroup" aria-label="调整范围">
+<button role="radio" aria-label="下一节训练" aria-checked="false" data-note="只调整最近一节尚未完成的训练，其他课程保留。">下一节</button>
+<button role="radio" aria-label="本周剩余训练" aria-checked="false" data-note="调整本周尚未完成的训练，已完成记录保留。">本周剩余</button>
+<button role="radio" aria-label="从下周开始" aria-checked="true" data-note="重新安排下一周的训练，本周安排保持不变。">下周</button></div><p class="hint scope-hint">重新安排下一周的训练，本周安排保持不变。</p></section>
+<section><div class="field-head"><h3>有哪些变化</h3><small>选填</small></div><div class="prompts" aria-label="快捷补充说明">
+<button aria-pressed="false" data-note="可训练时间减少，希望缩短单次训练。">时间不足</button>
+<button aria-pressed="false" data-note="目前训练强度偏高，希望适当降低强度。">强度偏高</button>
+<button aria-pressed="false" data-note="训练环境有变化，希望调整骑行安排。">训练环境变化</button>
+<button aria-pressed="false" data-note="希望调整训练重点，同时兼顾当前目标。">调整训练重点</button></div><p class="hint">点击补充到说明，也可以直接填写。</p>
+<textarea aria-label="训练调整说明" maxlength="240" placeholder="例如：这周工作比较忙，每次只能练 40 分钟，希望保留耐力训练。"></textarea><p class="counter">0/240</p></section>
+<a class="goal" aria-label="修改当前目标与日期" href="A03-training-adjustment.md#目标与生成"><div><small>当前目标</small><strong>提升耐力</strong><small>2030-04-01</small></div><span>修改</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>
+<p class="footnote">基于正式计划 v2 生成草稿，预览确认后生效。已完成的训练会保留。</p>
+<a class="primary" href="A03-training-adjustment.md#目标与生成">生成训练调整草稿</a>
+</div></main><p class="caption">390 × 844 pt · 合成示例<br>布局与交互预览；实际生成由 App 执行。</p></div>
+<script>
+const input=document.querySelector('textarea');const prompts=[...document.querySelectorAll('.prompts button')];
+function updateNote(){document.querySelector('.counter').textContent=input.value.length+'/240';prompts.forEach(button=>{const added=input.value.includes(button.dataset.note);const next=input.value?input.value+'\n'+button.dataset.note:button.dataset.note;button.setAttribute('aria-pressed',String(added));button.disabled=added||next.length>240;});}
+prompts.forEach(button=>button.addEventListener('click',()=>{input.value=input.value?input.value+'\n'+button.dataset.note:button.dataset.note;updateNote();}));input.addEventListener('input',updateNote);
+document.querySelectorAll('.choices button').forEach(button=>button.addEventListener('click',()=>{document.querySelectorAll('.choices button').forEach(other=>other.setAttribute('aria-checked',String(other===button)));document.querySelector('.scope-hint').textContent=button.dataset.note;}));
+</script>
+</body></html>
